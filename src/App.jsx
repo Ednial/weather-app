@@ -96,7 +96,14 @@ function App() {
 		}
 	}, [coords]);
 
-	return <div>{weather && <Weather weather={weather} />}</div>;
+	const styles = {
+		display: 'grid',
+		placeContent: 'center',
+		heigth: '100dvh',
+		textAling: 'center',
+	};
+
+	return <div style={styles}>{weather && <Weather weather={weather} />}</div>;
 }
 
 export default App;

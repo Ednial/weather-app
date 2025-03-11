@@ -1,8 +1,16 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 function Weather({ weather }) {
+	const [isFahrenheit, setIsFahrenheit] = useState(false);
+	const temp = isFahrenheit ? weather.temp * (9 / 5) + 32 : weather.temp;
+
+	const styles = {
+		backgroundColor: 'white',
+		padding: '20px',
+		borderRadius: '15px',
+	};
+
 	return (
-		<div>
+		<div style={styles}>
 			<h1>Weather App</h1>
 			<h2>
 				{weather.city}, {weather.country}
@@ -25,8 +33,12 @@ function Weather({ weather }) {
 				</div>
 			</div>
 			<div>
-				<h3>{weather.temp}</h3>
-				<button>Change to °F</button>
+				<h3>
+					{temp.toFixed(2)} {isFahrenheit ? '°F' : '°C'}
+				</h3>
+				<button onClick={() => setIsFahrenheit(!isFahrenheit)}>
+					Change to {isFahrenheit ? 'Celcius' : 'Fahrenheit'}
+				</button>
 			</div>
 		</div>
 	);
