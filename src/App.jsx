@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Weather from './components/Weather';
+import './App.css';
 import {
 	background,
 	cloudyDay,
@@ -96,14 +97,9 @@ function App() {
 		}
 	}, [coords]);
 
-	const styles = {
-		display: 'grid',
-		placeContent: 'center',
-		heigth: '100dvh',
-		textAling: 'center',
-	};
-
-	return <div style={styles}>{weather && <Weather weather={weather} />}</div>;
+	return (
+		<div calssName="container">{weather && <Weather weather={weather} />}</div>
+	);
 }
 
 export default App;

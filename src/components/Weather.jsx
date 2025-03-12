@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../Weather.css';
 function Weather({ weather }) {
 	const [isFahrenheit, setIsFahrenheit] = useState(false);
 	const temp = isFahrenheit ? weather.temp * (9 / 5) + 32 : weather.temp;
@@ -7,16 +8,17 @@ function Weather({ weather }) {
 		backgroundColor: 'white',
 		padding: '20px',
 		borderRadius: '15px',
+		textAling: 'center',
 	};
 
 	return (
-		<div style={styles}>
+		<div className="weatherCard">
 			<h1>Weather App</h1>
 			<h2>
 				{weather.city}, {weather.country}
 			</h2>
-			<div>
-				<img src={weather.icon} alt="icon-reserved" />
+			<div className="weather-info">
+				<img className="weather-icon" src={weather.icon} alt="icon-reserved" />
 				<div>
 					<h3>"{weather.description}"</h3>
 					<ul>

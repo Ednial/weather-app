@@ -1,0 +1,30 @@
+.weatherCard {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 400px;
+	margin: auto;
+	text-align: center;
+}
+.weather-icon {
+	width: 100px; /* Adjust the width as needed */
+	height: auto; /* Maintain aspect ratio */
+	border-radius: 50%; /* Make the image circular */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+	margin-bottom: 10px; /* Add some space below the image */
+}
+.weather-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px; /* Adjust the gap between the icon and the text as needed */
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Full viewport height */
+	background-color: #ffffff;
+}
