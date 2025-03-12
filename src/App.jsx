@@ -98,7 +98,9 @@ function App() {
 	}, [coords]);
 
 	return (
-		<div calssName="container">{weather && <Weather weather={weather} />}</div>
+		<div calssName="card">
+			<span>{weather && <Weather weather={weather} />}</span>
+		</div>
 	);
 }
 
